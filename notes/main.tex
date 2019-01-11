@@ -1,0 +1,112 @@
+%%% Preamble
+\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+
+\usepackage[english]{babel}															% English language/hyphenation
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[pdftex]{graphicx}	
+\usepackage{url}
+
+
+%%% Custom sectioning
+\usepackage{sectsty}
+\allsectionsfont{\centering \normalfont\scshape}
+
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}											% No page header
+\fancyfoot[L]{}											% Empty 
+\fancyfoot[C]{}											% Empty
+\fancyfoot[R]{\thepage}									% Pagenumbering
+\renewcommand{\headrulewidth}{0pt}			% Remove header underlines
+\renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
+\setlength{\headheight}{13.6pt}
+
+
+%%% Equation and float numbering
+\numberwithin{equation}{section}		% Equationnumbering: section.eq#
+\numberwithin{figure}{section}			% Figurenumbering: section.fig#
+\numberwithin{table}{section}				% Tablenumbering: section.tab#
+
+
+%%% Maketitle metadata
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+
+\title{
+		%\vspace{-1in} 	
+		\usefont{OT1}{bch}{b}{n}
+		%\normalfont \normalsize \textsc{} \\ [25pt]
+		\horrule{0.5pt} \\[0.4cm]
+		\normalsize MIT(16.399) - Abstract Interpretation (Patrick Cousot) \\
+		\horrule{2pt} \\[0.5cm]
+}
+\author{
+		\normalfont 								\normalsize
+        Satyendra Kumar Banjare\\[-3pt]		\normalsize
+        \today
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+This is more like a summary of all the lecture slides presented in ordered manner.
+
+\section{Overview of Abstract Interpretation}
+\begin{itemize}
+	\item{\textbf{Static Analysis} : 
+	}
+	\item{\textbf{Semantics \& Undecidability} : 
+	}
+	\item{\textbf{Safety Proofs} : 
+	}
+	\item{\textbf{Abstract Interpretation \& Formal Methods} : 
+	}
+	\item{\textbf{Trace Semantics} : 
+	}
+	\item{\textbf{Collecting Semantics} : 
+	}
+	\item{\textbf{Abstracting Sets \& Concretization} : 
+	}
+	\item{\textbf{Convergence Acceleration} : 
+	}
+	\item{\textbf{Interval Analysis} : 
+	}
+	\item{\textbf{Refinement of Abstractions} : 
+	}
+	\item{\textbf{Combinations of Abstractions} : 
+	}
+	\item{\textbf{Backward \& Forward Analysis} : 
+	}
+\end{itemize}
+
+\section{Software Verification Problem}
+\section{Abstract Invariance and Termination Proofs}
+\section{Set Theory}
+\section{Operational Semantics}
+\section{First Order Logic}
+\section{Program Specifications}
+\section{Collecting Semantics}
+\section{Lattice theory - 1}
+\section{Lattice theory - 2}
+\section{Ordered Maps \& Galois Connections - 1}
+\section{Ordered Maps \& Galois Connections - 2}
+\section{FixPoint Theory - 1}
+\section{FixPoint Theory - 2}
+\section{Abstraction - 1}
+\section{Abstraction - 2}
+\section{Post Condition semantics}
+\section{Approximation}
+\section{Non-relational monotonic finitary static analysis - 1}
+\section{Non-relational monotonic finitary static analysis - 2}
+\section{Forward Non-relational Infinitary Static Analysis}
+\section{Forward Relational Finitary Static Analysis}
+\section{Iterated Forward/backward Relational infinitary Static Analysis}
+
+
+\end{document}
+
