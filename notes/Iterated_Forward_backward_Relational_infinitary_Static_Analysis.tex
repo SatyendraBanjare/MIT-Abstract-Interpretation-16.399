@@ -1,0 +1,64 @@
+\chapter{Iterated Forward backward Relational infinitary Static Analysis}
+
+\begin{itemize}
+	\item{\textbf{revisits} : retouched topics operational semantics, program transition relation, Big-Step Operational Semantics, Structural Big-step operational semantics, forward collecting semantics of boolean and arithmetic expressions.
+	}
+
+	\item{\textbf{Backward/precondition collecting semantics} : Backward Precondition is the weakest precondition for execution of P from entry point of command C to have the  possibility to reach a final state in R on exit of the command.
+
+	Structural semantic specifications of it include rules for skipping, conditional statement, looping.
+
+	in slides a proof has been explained for the correctness of backward collecting semantics.
+	}
+
+	\item{\textbf{Backward/precondition relational abstract semantics} :
+	an abstract relation semantics is abstraction of backward collecting semantics in a given environment conditions.
+
+	an extra condition for the environment is added and applied with every Structural specifications of backward semantics.
+
+	its correctness is also proved in the lecture.
+	}
+
+	\item{\textbf{Generic backward/precondition linear relational analyzer} :
+	Ocaml implementation.
+
+	this adds a mapping function to linearized commands at the sarting point. 
+	}
+
+	\item{\textbf{Polyhedral backward/precondition analysis} :
+	Ocaml implementation.
+
+	inntroduces the idea of handling backward assignments.
+
+	}
+
+	\item{\textbf{The precondition/postcondition collecting semantics} :
+	revisits the idea of transition system.
+
+	the forward/backward semantics is a pair.
+
+	for abstraction we can over-approximate this pair.
+	}
+
+	\item{\textbf{The precondition/postcondition abstract semantics and its implementation} :
+	Given a forward/backward semantics pair and we want to over approximate it, we can use greatest fixpoint characterization.
+
+	
+	Pre/postcondition static analysis - The chaotic iterations convergence need to be enforced via narrrowing. 
+	}
+
+	\item{\textbf{The forward/backward reachability collecting semantics} : forward reachability is the set of descendents of initial states by specified transitions. 
+
+	backward reachability is the set of ascendents of final states by specified transitions. 
+	}
+
+	\item{\textbf{The forward/backward reachability abstract semantics} : 
+	}
+
+	\item{\textbf{Optimality} : the forward-backward combination is the optimal approach to get the best result.
+	}
+
+	\item{\textbf{The ASTRÉE static analyzer} : properties and some functionality discussed.
+	}
+
+\end{itemize}
