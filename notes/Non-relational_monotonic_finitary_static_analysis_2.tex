@@ -1,0 +1,65 @@
+\chapter{Non-relational monotonic finitary static analysis 2}
+
+Abexp = abstract expression.
+
+Bexp = boolean expression.
+
+comm = command.
+
+
+\begin{itemize}
+	\item{\textbf{Generic backward/bottom-up static analysis of arithmetic expressions} : is not useful in tests where the end result is known.
+
+	Is more helpful in the case of initialization and sign allotment.
+
+	It follows that any information on the possible result of an arithmetic expression should bring informationon the values of the variables involved in the arith-metic expressions for its result to satisfy the knwon information.
+	}
+
+	\item{\textbf{Backward/bottom-up collecting semantics of arithmetic expressions is a lower closure operator} : collecting semantics of arithmetic helps in finding the environment variable for which the arithmentic expression will evaluate to true.
+
+	A lower Closure Operator definition of collecting semantics of arithmetic expressions follows monotonicity, reductivity and idempotency.
+	}
+
+	\item{\textbf{Structural definition of the backward/bottom-up collecting semantics of arithmetic expressions} : revised definition and relational mapping that represent the changes in the environment variables it depends on.
+	}
+
+	\item{\textbf{Generic backward/bottom-up non-relational abstract semantics of arithmetic expressions} : it deals with getting the over approximations of backward collecting semantics.
+	}
+
+	\item{\textbf{Structural definition of the genericbackward/bottom-up non-relational abstract semantics of arithmetic expressions.}
+	}
+
+	\item{\textbf{Calculational design of the generic backward/bottom-up non-relational abstract semantics of arithmetic expressions} : uses compositional rules and compositions of various abstraction and concretization functions to realize the semantics. 
+	}
+
+	\item{\textbf{Ocaml Implementation of the primitive backward/bottom-up non-relational abstract arithmetic operations for initialization and simple sign analysis}.
+	}
+
+	\item{\textbf{Improving the non-relational analysis of boolean expressions using the backward analysis of its arithmetic subexpressions} : 
+
+	The abstract interpretation of boolean expressions can be revised using the backward abstract interpretation of arithmetic expressions and can be parametried using comparison operators.
+	}
+
+	\item{\textbf{Calculational design of the revisited non-relational abstract interpretation of boolean expressions} : uses rule based derivation to find the abstraction of boolean expression.
+	}
+
+	\item{\textbf{Abstract arithmetic comparison operations forthe initialization and simple sign analysis} : deals with Generic abstract boolean equality.
+
+	The calculational design ofthe abstract equality operation does not depend upon the specific choice of Lattice 'L'.
+
+	the table with all the different possible combinations of data type and sign initialization is specified.
+	}
+
+	\item{\textbf{Local decreasing iterations} : the lower closure operaotor is better abstract interpretation for the  monotonous reductive type mapping on a given lattice.
+	}
+
+	\item{\textbf{The forward/top-down nonrelational abstractsemantics of arithmetic expressions is monotone} : 
+	}
+
+	\item{\textbf{The forward/top-down nonrelational abstractsemantics of boolean expressions is monotoneand reductive} :
+	}
+
+	\item{\textbf{reductive expression for boolean formulae} :
+	}
+
+\end{itemize}
