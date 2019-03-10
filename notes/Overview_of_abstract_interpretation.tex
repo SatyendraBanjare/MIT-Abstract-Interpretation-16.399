@@ -1,0 +1,65 @@
+\chapter{Overview of Abstract Interpretation}
+
+This is a perfect introduction to all the things which briefly comprises of the following topics :
+
+
+\begin{itemize}
+	\item{\textbf{Static Analysis} : 
+	It concerns the pre and post "static" conditions of a program's variables/states. All the logical conditions are checked for safety, only if it exists. By incorporating the method of Abstract Interpretation, we seek to perform basically two operations \- Verification \& Abstraction.
+	}
+	\item{\textbf{Semantics \& Undecidability} : 
+	The concrete semantics of a program formalizes (is a mathematical model of) the set of all its possible executions in all possible execution environments. This can be thought of as a set of all possible trajectories given that starting points may or may-not be same for an assumed program's mathematical model.
+
+	Undecidability refers to non-terminatibility of a program state and we say that infinite loop has begun, conversely the solution term is not possible to achieve. The Programs structured after should use the termination of earlier as an indication to start, on not getting that, It is possible that it wont start at all.	
+	}
+
+	\item{\textbf{Safety Proofs} : 
+	Safety Properties guarantees the correct functioning of a program. A safety proof simpy states there exists no relation between correct functioning and incorrect behaviour (Bugs and undecidability) of programs. Test are a Subset of all the possible Safety proofs for a given semantics and performance parameters.
+	}
+
+	\item{\textbf{Abstract Interpretation \& Formal Methods} :
+	Abstract Semantics serves as a super set of all possible executions hence it covers all posiible behaviour. Therefore proving correctness of abstract semantics should be preferred. Formal methods are just abstract interpretations of working behavious and it differs in having a pre-defined semantics (example - programming language's grammar) and has been used to perform model-checking. 
+
+	It uses some deductive methods and static analysis methods to achieve safety proofs.
+	As a basic need these proofs / abstract interpretations must be Sound, Precise and easy to get.
+
+	Some graphic example covers possible trajectories and forbidden zones.
+	}
+
+	\item{\textbf{Trace Semantics} : 
+	Collection of "Ordered" states of executions is trace and adding rules for their behaviour is simply called trace semantics. These can be of two types finite and infinite. A prefix trace semantics has pre-set maximal number of possible behaviours. This is often decided by using some type of logical condition. It is equivalent to defining subsets.
+	}
+	\item{\textbf{Collecting Semantics} :
+	Collection of "unordered" states to executions is called collecting semantics. It just considers the presence of a given state and not how that particular state was reached. 
+	}
+	\item{\textbf{Interval Abstraction} :
+	This is simple performing abstract interpretations and tracing after fixed number of steps or fixed time.
+	}
+	\item{\textbf{Abstracting Sets \& Concretization} : 
+	Consider a Concrete set 'S' the contains all the concrete objects/states (defined by the concrete semantics) and Abstract set $\alpha$(S) that contains all the abstrat objects/states defined by the abstrat semantics.
+
+	Abstraction function $\alpha$ maps a set of concrete objects to its abstract interpretation and a Concretization function $\gamma$ that maps a set of abstract objects to its concrete ones. This easily follows that it should be monotone and that the composition $\alpha o \gamma$ is extensive and the comosition $\gamma o \alpha$ is reductive.
+
+	\textbf{Galois Connections}
+
+	}
+	\item{\textbf{Convergence Acceleration} : 
+	This deals with fastly analyzing the behavioural semantics using some techniques listed as "upward iteration with widening" and 'upward iteration with interval widening'. Stabiliy of this method is discussed. 
+	}
+	\item{\textbf{Interval Analysis} : 
+	This is a mathematical method and this basically defines and modifies sets (real numbers) as the program proceeds the execution. 
+	}
+	\item{\textbf{Refinement of Abstractions} : 
+	Having defined abstractions, it is rather more important to have a refined abstraction that just covers all possible states. Graphically, It is the minimal figure [PolyHedra] covering all the state points. Beautifully explained by the usage of congruences Linear and Trapezoidal linear to achieve more refined abstractions. 
+
+	Graphicaly Explined the possiblity of having discontinuous surfaces/geometry . The abstraction should smartly covering all these. 
+
+	Partitioned iteration with Widening and interval widening are explained beautifully. 
+	}
+	\item{\textbf{Combinations of Abstractions} : 
+	Various smaller abstractions can be combined to develop abstractions for the complete program. Thus it leads to using method of backward and forward analysis for approximating behaviour.
+	}
+	\item{\textbf{Backward \& Forward Analysis} :
+	As the name implies this differ in just with iterating the program in the direction of either forward, one state covered after other in an ordered manner. A mixed Backward and forward analysis involves recollecting and reusing a previous state	for the analysis of current state. 
+	}
+\end{itemize}
