@@ -1,0 +1,93 @@
+\chapter{Program Specifications}
+
+\begin{itemize}
+	\item{\textbf{Program Semantics and Specifications} : semantics refers to the properties of program it does have, specifications refers to the properties the a program should have. program semantics include different type of Operational semantics, natural and reachability semantics.
+	}
+
+	\item{\textbf{Small Step Semantics} : It is a transition system of program states defined with transition rules and final states.
+	}
+	
+	\item{\textbf{Trace Semantics } : records the sequence of program states.
+	}
+	
+	\item{\textbf{Partial Trace Semantics } : records the sequence of program states given a precondition or a prefix trace.
+	}
+	
+	\item{\textbf{Maximal Trace Semantics } : it is performing trace semantics for the state 'S' as well as it's negation 'not(S)'.
+	}
+	
+	\item{\textbf{Big-Step Operational Semantics } : It is the semantics of transition system. It represents deciding rules for the Small-Step semantics.
+	}
+	
+	\item{\textbf{ Natural Denotational Semantics} : decides the semantics of transition system for some blocked states. the 'natural' term possibly means the real case scenario where there are very possible blocked cases/states. 
+	}
+	
+	\item{\textbf{ Natural Operational Semantics} : deciding Op-semanctics with care taken the non-termination is never possible.
+	}
+	
+	\item{\textbf{Forward Reachability Semantics } : semantics of forward transition of program states.
+	}
+	
+	\item{\textbf{Backward Reachability Semantics} : semantics of Backward transition of program states.
+	}
+	
+
+	\textbf{From Abstract Interpretatin point of view, the different semantics are simply abstractions of each other.}
+
+
+	\item{\textbf{Specification of program Semantics} : decideds the properties that a program semantics should have. Covers the Idea of Correctness of the program Semantics.
+	}
+	
+	\item{\textbf{Trace Properties} : trace semantics should be a subset of correctness specification properties. 
+
+	includes the idea of relational properties, partial correctness and total correctness.
+	}
+	
+	\item{\textbf{State Properties} : It is also a weaker form of correctness of program specification properties. includes the idea of forward reachability, specification and runtime errors.
+
+	example cases of proving state properties includes ideas like : there should exist no run-time error. 
+	}
+	
+	\item{\textbf{Program Logics} : Formal Descriptions of program logic include representing programs specification in terms of sets, relation between sets and developing the trace semantics.
+	}
+	
+	\item{\textbf{Set of States Predicate logic} : exlpined earlier, this deals with expressing the state transition in terms of disjoint mathematical sets.
+
+	Developing Sets, we can understand the program specification in more better way.
+
+	This can be further extended to also account for errors (on safe side we should definitely account for these error !!).
+
+	It also involves extending the assignment properties too. 
+	}
+	
+	\item{\textbf{State Relation Predicate Logic} : It involves extending the different state properties'. this means extending syntax rules, Assignment rules, predicate rules and trace rules.
+
+	This extends the set-wise relation of semantical attributes of the program.
+	}
+	
+	\item{\textbf{Trace Predicate Logic} : For  better assesment of trace semantics, we have used some of the predicates such as having a finite time interval, using atomic formulae.
+	}
+	
+	\item{\textbf{Extending logic semantics} : This is performed by extending the syntax of the predicates, extending the assignment semantics of 'Control Variables'.
+	}
+	
+	\item{\textbf{Linear Time Temporal Logic} : temporal logic specify out the execution trees, A linear time temporal logic essentially analyzes the execution trees by deciding traces one at a time.
+	}
+	
+	\item{\textbf{Linear Time Temporal Logic syntax} : is similar to 'terms', includes definition for universal quantification, generalizations and negations. 
+	}
+	
+	\item{\textbf{LTL expression system} : Includes LTL auxiliary operators - Eventually , Henceforth, and waiting .(all these words to be understood with respect to the time dependence nature of the program.)
+
+	includes expressing temporal tautologies. (differnt expression forms)
+	}
+	
+	\item{\textbf{Synchronous Languages} can be used to specify sets of finite traces.}
+
+	\item{\textbf{comparative example of specification} : 
+	a simple filter program is explained where by making it clear the temporal logic makes it difficult to understand each states. 
+
+	it is thus difficult to auto-generate useful code.
+	}
+	
+\end{itemize}
