@@ -1,0 +1,99 @@
+\chapter{Abstract Invariance and Termination Proofs}
+
+\begin{itemize}
+
+	\item{\textbf{Fundamental Limitation} : The Hilbert's Axiomatic program to reform the basis of mathematics and it being proved incorrect by Godel's Incompleteness theorem. The Axiomatic system is not possible entirely !! 
+	}
+
+	\item{\textbf{Decidable/Semidecidable/Undecidable} : Decidable if algorithm exists to solve the program in finite time.
+	Undecidable if there exists no algorithm to solve the problem in finite time.
+	Semidecidable if solvable in finite time for some cases and completely un-solvable for other cases. 
+	}
+
+	\item{\textbf{Termination Problem} : Given input data and some preconditions, whether that sequential program will terminate or not. Non-Termination problem to check whether the program will not terminate.
+
+	Using a simple example of Interpretor program, it has been shown that termination can be semi-decidable as well as Undecidable using 'reductio ad absurdum'.
+
+	Non-Termination is not semidecidable. Simply anding semidecidable(termination) and semidecidable(Non-Termination) it results to decidable(termination).
+	}
+
+	\item{\textbf{Problem Reduction} : it follows that if program 'P' is decidable, it means its termination proof is also 'decidable'.
+
+	Constant propogation problem (retaining constant value of a variable in a program) is undecidable !!
+	}
+
+	\item{\textbf{Approximations} : As a way to tackle (thought it is absurd to do completely) , We can have approximations of things that might happen. example - false alarms in ASTREE.
+	}
+
+	\item{\textbf{Computational Complexity} : 
+	Time and space required to solve a problem. It has classes such as P , NP, Co-NP
+
+	\begin{itemize}
+		\item{\textbf{NP-Hard} is observed if every NP problem can be redued to it. }
+		\item{\textbf{Boolean SAT problem} They are NP-complete Problems.
+
+		NP-complete problems are generally solved by a fixed parameter approach.
+
+		Probabilistic nature of solution algorithms has overall good average range of solving time.
+
+		Approximations with optimal error range is done to solve the problem.
+
+		Example of SAT solver algo - DLL algorithm.	
+		}
+	\end{itemize}
+	}
+
+	\item{\textbf{ Termination Analysis Method} : 
+	It proves the termination conditions of  a program. Example of a while loop is explained. This methos uses 4 major parameters in consideration : Termination precondition , Loop invariant, operational semantics and Ranking Function.
+
+	Forward reachability properties and partial correctness is referred to guide the program beginning, Backward reachability for the program termination. 
+	
+
+	\begin{itemize}
+	\item{\textbf{Auxiliary termination counter method} : It involves using an auxilary counter to enforce the bound (termination) of program. The Loop invariant is found by using a forward relational static analysis. The operational semantics is then known by performing a forward static analysis.
+
+	\textbf{Floyd's Ranking Method} to prove Termination then uses a ranking function to determine rank of loop/program invariant. This Ranking function should be always decreasing and Non-Negative.
+
+	Example of arithmetic mean function's termination using ranking function is beautifully explained. 
+	}
+	
+	\item{One method involves Expressing the loop invariant and relational semantics as numerical positivity constraints. Then the floyd's method is applied to get the termination conditions. 
+
+	The Loop Invariant for a given step of loop can be expressed as an anding of variables of op-semnatics at each previous step !!. see equation in the slides.
+	}
+
+	\item{\textbf{Lagrangian Relaxation} : Involves reforming the problem by estimation the conjuctiona and implications using lagrangian relaxation.
+
+	It is simple mathematically to understand $\lambda _ i$ lagrangian coefficients for the given problem. Finding these coefficients is carried using different methods. Basically we are approximating a major problem/ major curve by a smaller/easier representation.
+
+	Yakubovich’s procedure is often used to prove the completeness.
+	}
+
+	\item{\textbf{Parametric Abstraction of Ranking Function} :
+	Assuming a Ranking Function form for some unkown parameters we are trying to solve for those parameters.
+	}
+
+	\item{\textbf{Approximating Universal Quantifications using Linear Matrix Inequalities (LMI)} 
+	LMI of ranking function is formed. Further problem reduction shows that this LMI problem reduces to provinf semi-definitiveness of matrix which can be done using mathematical programming and/ord using LMI solvers.
+
+	Extending this, we should try to solve the Convex constraints (see slides pictures) also by the semidefinite programming. 
+
+	This involves using linear programming, ellipsoidlal methods and interior methods.
+
+	Futher more we can transform non-convex constraints to convex constrains then aplly the previous steps to solve things out.
+	}
+	
+	\item{\textbf{Handling Non-determinancy} includes case analysis, interleaving for concurrency and encoding with explicit scheduler.}
+
+	\item{\textbf{Floyd's method for invariance } involves determining loop precondition and loop invariant, further also proving that the loop variant is inductive.
+
+	This transforms the problem to a Bilinear Matrix Inverse type problem.
+
+	\textbf{BMI solvers by Semi-Definite programming} is thus used. 
+	}
+
+	\end{itemize}
+	}
+
+\end{itemize}
+
