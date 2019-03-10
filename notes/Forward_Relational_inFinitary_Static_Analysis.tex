@@ -1,0 +1,104 @@
+\chapter{Forward Relational Infinitary Static Analysis}
+
+\begin{itemize}
+	\item{\textbf{Motivation} : We want to combine abstract analyzes that are  defined independently of one another. Each analysis is defined on the collecting semantics by a closure operator. the combination produces a reduced product that corresponds to lub of closure operators.
+	}
+
+	\item{\textbf{lub of closure operators} : a monotone and extensive function defined on a cpo then lfp is a least upper closure on the cpo greater or equal to that function.
+	}
+
+	\item{\textbf{Iterative reduced product} : two complete lattices can be shown to be related in galois connection with the functions of product and sum to visualize the idea of universalization. 
+
+	Cartesian product of abstract domains (complete lattices). The cartesian product of abstractions discovers in one shot the information found separately by the component analyzes.
+	}
+
+	\item{\textbf{Reduction Operator and Reduced product} : reduction operator is a least closure operator that defines a galois connection between complete lattice.
+
+	the reduced product is a poset having a componenet wise ordering defined using composition rules for complete lattices.
+
+	The advantage of the reduced product over the cartesian product of analyses is that each analysis in the abstract composition benefits from the information brought by the other analyses.
+	}
+
+	\item{\textbf{The reduced product of three abstract domains or more} : We can do iterated reduction on groups. the advantage being that pairwise reductions are easy to design than the global reductions for the complete domain.
+	}
+
+	\item{\textbf{Generic forward abstract interpreter with reduced product} :
+	Ocaml implementation of the  ternary iterated reduction, parity and initialization and simple sign reduction, parity and intervals reduction.
+	}
+
+	\item{\textbf{Generic Abstract interpreter - usage and construction specifications} : Ocaml implementation.
+	}
+
+	\item{\textbf{linearization} : Reduction can cancel convergence enforcement by widening/narrowing. The linearization or linear abstraction of variables of SIL program is vectorization of states. there are two ways to analyze the state namely dynamic and static. the dynamic analysis may/may-not predict the static state correctly. linearization helps in improving dynamic analysis accuracy.
+
+	}
+
+	\item{\textbf{correctness of abstract abstraction} : The syntactic transformation of an arithmetic expression A of a program P into its linear form yields an upper approximation of its forward collecting semantics.
+	}
+
+	\item{\textbf{Linearization of boolean expressions} : The extension of linearization to boolean expressions is trivial since it essentially concerns the arithmetic expressions within the boolean expression.
+	}
+
+	\item{\textbf{program linearization} : the concept of linearization can be extended to commands and programs. supporting implementation added in lecture.
+	}
+
+	\item{\textbf{implementation of static linear abstraction} : Ocaml implementation.
+	}
+
+	\item{\textbf{linear abstraction of programs} : Basically means the vector coefficients for different used variables. 
+	}
+
+	\item{\textbf{generic linear relational abstract interpreter} : the expenses are analyzed as whole under relational analysis. 
+	}
+
+	\item{\textbf{Generic linear relational abstract domains} : for linear relational analysis, these are array, variables, set of environments, initialization functions etc.
+	}
+
+	\item{\textbf{Generic linear relational analysis of boolean expressions}  
+	}
+
+	\item{\textbf{Generic linear relational analysis of commands} : similar to non-relational analysis, but the checking is performed on linear/ vectorized attributes.
+	}
+
+	\item{\textbf{Fixpoint computation with widening/narrowing} : introduces traces and trace fixpoint computation.
+	}
+
+	\item{\textbf{Polyhedral relational static analysis} : For the vector space defined over a field, the abstract affine inequalities form a convex closed polyhedra. this may or may not be closed.
+	}
+
+	\item{\textbf{Affine Hull} : called as convex hull is combination of set points and their affine combinations. not defined for infinite number of points. example -  a ray formed from collection of points. We use concretization function only. 
+	}
+
+	\item{\textbf{Minimal representations} : polyhedra representations includes representation by constraints, generators. it is colled minimal if no constraints can be eleminated without changing the polyhedra.
+	}
+
+	\item{\textbf{Chenikova Algorithm} : helps in achieving a minimal representations of polyhedra by checking for constraints.
+	}
+
+	\item{\textbf{Minimization of the system of generators by Le Verge algorithm} : helps in achieving a minimal representations of polyhedra by checking for generators.
+	}
+
+	\item{\textbf{lattice structure of polyhedra} : 
+	test for emptiness - No verterx.
+
+	inclusion test - subset present.
+
+	equality - overlapping polyhedra.
+
+	union.
+	}
+
+	\item{\textbf{Abstract Polyhdral transfer functions} : involves linear transformation. polyhedral widening is also a transformation that changes some of the constraints.
+	}
+
+
+	\item{\textbf{polyhedral libraries} : set of libraries that help in polyhedral analysis.
+	}
+
+	\item{\textbf{implementation of polyhedral analysis} : Ocaml implementation.
+	}
+
+	\item{\textbf{polyhedral abstract environment} : Ocaml implementation.
+	}
+
+\end{itemize}
