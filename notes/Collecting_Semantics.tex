@@ -1,0 +1,82 @@
+\chapter{Collecting Semantics}
+
+Collecting Semantics defines a whole class of static analyzers, all those one can abstract/apporximate .
+
+\begin{itemize}
+	\item{\textbf{Collecting Semantics of Arithmetic Expressions} : is a complete join morphism. Forward Collecting Semantics defines all the possible values a given arithmentic expression can evaluate to given the environment conditions.
+	}
+
+	\item{\textbf{Forward/bottom-up Collecting Semantics of Boolean Expressions} :
+	defines the set of all the environment where a given boolean expression can evaluate to true.
+
+	small-step transition system is follwed in forward collecting semantics.
+	}
+
+	\item{\textbf{Collecting Semantics of commands} : structural Big-step collecting semantics of 'commands' link the entry-exit points of program states not only in a natural order but also represent conection/links from any current state to other subsequently reached state.
+	}
+
+	\item{\textbf{Structural Op-semantics} : We define and work with entry-exit state points throughout the program analysis. 
+
+	Op-semantics of if-else or conditional command has been explained.
+	}
+
+	\item{\textbf{Structural big-step Semantics of iteration} :
+	Transitive closure relation on iteration program is proved.
+	}
+
+	\item{\textbf{Structural big-step Semantics of Sequence} :
+	Reflexive Transitive closure relation on sequence of programs is proved.
+	}
+
+	\item{\textbf{Classification of Program Trace Properties} :
+
+	}
+
+	\item{\textbf{Safety} :
+		\begin{itemize}
+			\item{Ensures Bad things can not happen.
+			}
+
+			\item{ Prefix closure (PCI) of traces if pre-conditions, set relations created for traces of a safety program.
+			}
+
+			\item{limit closure defines the set of prefix closres that can have infinitely many prefixes.
+			}
+
+			\item{ safety property 'S' means traces set bounded by prefix closures. 
+
+			example - invariance.
+
+			}
+
+			\item{Safety properties can be analyzed only by looking at partial program behaviour.
+			}
+
+		\end{itemize}
+
+	}
+
+	\item{\textbf{Liveliness} :
+
+		\begin{itemize}
+			\item{ A property is a Liveliness property if the property's behaviour can be representedas a subset of its PCI.
+			}
+
+			\item{Proving the liveliness properties requires considering the infiniteness of program's behaviours.
+			Example - termination.
+			}
+		\end{itemize}
+
+	}
+
+	\item{\textbf{Dual Limit} : double negation of propery PCI of a property P.
+
+	results in a non-monotonicity, extensivity.
+	}
+
+	\item{\textbf{Decomposition of total correctness} :
+	Any Property 'P' can be broken down into partial Safety Property and Liveliness Propoerty and can be represented as a intersection of both..
+	}
+
+	
+\end{itemize}
