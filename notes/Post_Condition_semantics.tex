@@ -1,0 +1,41 @@
+\chapter{Reachability and Post Condition Semantics}
+
+\begin{itemize}
+
+	\item{ a small revision to \textbf{Forward collecting semantics of arithmetic expressions} , \textbf{Forward collecting semantics of boolean expressions} , \textbf{Big-step operational semantics ofcommands} is explained. 
+	}
+
+	\item{\textbf{Postcondition collecting semantics of commands} : The postcondition semantics of a command (of a given programP) specifies the strongest postcondition satisfied by environments resulting from the execution of thecommandCstarting in any of the environments satisfying thepreconditionR, if and when this execution terminates.
+
+	it forms a complete join morphism over the set of states and hence is monotonic and transitive.
+
+	It can be understood as an abstraction of big-step operational semantics. (elaborately proved in the lecture slides.)
+	}
+
+	\item{\textbf{Transition system of a program} : is defined as a set of states and a set of relations (commands) defined between those states and environment.
+	}
+
+	\item{\textbf{Forward reachability collecting semantics of commands} : gives set of reachable states during any execution of a command starting at its starting point in any of the enviornments satisfying the precondition.
+	}
+
+	\item{\textbf{property and semantics of forward reachabilty of commands} : 
+	it is complete join isomorphism, it means it is continuous, monotone and strict.
+
+	post condition semantics is a abstraction of forward reachability collecting semantics. we can thus design either the termination conditions or the forward reachability of commands. 
+
+	the complexity of either case should be looked in first before construction.
+	}
+
+	\item{\textbf{Implementation of the forward reachability collecting semantics}.
+	}
+
+	\item{\textbf{trace of the fixpoint computation with two nested loops}.
+	}
+
+	\item{\textbf{Totally ordered types in OCaml}.
+	}
+
+	\item{\textbf{Implementation: sets in OCaml}.
+	}
+
+\end{itemize}
