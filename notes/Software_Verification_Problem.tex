@@ -1,0 +1,80 @@
+\chapter{Software Verification Problem }
+
+\begin{itemize}
+	\item{\textbf{Bugs} : 
+	Recent advancements in Computational power has also increased the possibility of bugs that are commonly known to us in form of overflows of memory. A smart and safe implementation is needed. 
+	}
+
+	\item{\textbf{Program Verification Methods} : 
+	These are ways to guarantee the correct working of a program. It may not be the state of art but definitely better than existing methods.
+	\begin{itemize}
+		\item {\textbf{ Testing/ Writing Tests} :
+		It gives the presence of possible bugs relative to some cases. thus it is very possible that many bugs can be easily missed. 
+		}
+		\item {\textbf{ Verification} : It gives the complete absence of bugs related to a given specification. It includes the conditions of overflows and undecidability problem. It is more useful.
+		}
+	\end{itemize}
+	}
+
+	\item{\textbf{Partial Correctness} :
+	It involves having a PreCondition 'P', PostCondition 'Q' relative to a given program condition 'C'. Then Partial Correctness follows that P holds on the beginning of C and Q holds at the termination of C. Hoare triples notation is explained. 
+
+	\textbf{Invariant} is an assertion that always holds irrespective of program condition. example : the physical parameters in case of hardware specification.
+
+	An example of Euclidian Integer Division lemma is also explained.
+	}
+
+	\item{\textbf{Floyd/Naur invariance proof method} :
+	It basically involves proving two things :
+
+	1. The assertions on the entry point of program holds.
+
+	2. The inductively defined assertions hold. Termination of one program also follows that the invariant assertion does hold.
+
+	\begin{itemize}
+		\item{\textbf{Assignment Verification} : It involves proving 'There Exists' type of problem. The invariant should hold. An example of integer increment is explained.}
+		\item{\textbf{Conditional Verification} : It involves program 'Conditional existance' of program invariants. An example of abs(x) is explained.}
+		\item{\textbf{While Loop Verification} : It involved proving the looping in a program. Basically the while condition, the next assignment verification is carried out for the iterating variable.}
+	\end{itemize}
+	}
+
+	\item{\textbf{Hoare Logic} : This involves 5 rules namely the assignment axiom, composition rule, if-else rule, while rule, consequence rule. It is used to explain the correctness in proof steps of Euclidian Integer division lemma.}
+
+	\item{\textbf{Termination} : The most important aspect of program is that it should terminate, checking for relative completeness is also an important part of software verification. Mathematically it is expressed as having a well-founded relation.}
+
+	\item{\textbf{Floyd termination proof method}:
+
+	1. Exhibit a so-called ranking function from the values of the program variables to a set S and a well-founded relation r on S. 
+ 
+	2. Show that the ranking function takes r-related values on each program step.
+	}
+
+	\item{\textbf{Total Correctness  =  Partial Correctness \^ Termination}.}
+
+	\item{\textbf{Manna/Pnueli logic}}
+
+	\item{\textbf{Transformer Calculus} : 
+	Dijkstra introduced predicate transformers, namely weakest liberal PreCondition [WLP] and Weakest PreCondition [WP].  
+
+	These transformer rules included : 
+	\begin{itemize}
+		\item{ Skip (leaving the state unchanged) it's evaluation is same for WLP and WP.}
+		\item{ Abort ( to leave state that never ends) its evaluation is true for WLP and false for WP.}
+		\item{';' composition in sequential order. it behaves similar way for both.}
+	\end{itemize}
+
+	Other aspects of transformer calculus :
+	\begin{itemize}
+		\item{ Non-deterministic choice of commands may give different results depending on how it is binded WLP or WP.}
+		\item{ Guards are used preconditions. They can be implemented in two ways like '?G' and '!G' meaning basically the if-else condition for 'G' and not condition for 'G' respectively. }
+	\end{itemize}
+
+	\item{\textbf{Iteration} : Repetitive construct by Dijkstra involving guards .}
+
+	}
+	\item{\textbf{Automatic Verification Methods} : Involves using theorem provers to auto-generate the next logical states and easy out verification by wrong-case elimination.
+	}
+	
+\end{itemize}
+
+
