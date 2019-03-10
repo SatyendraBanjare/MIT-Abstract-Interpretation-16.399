@@ -1,0 +1,99 @@
+\chapter{FixPoint Theory 1}
+
+\begin{itemize}
+	\item{\textbf{fixpoints} : 
+	operator on set that returns the same value as argument.
+
+	There also exists pre, post fix operators.
+
+	least fixpoint exist for if the values they return there exists a element satisfying characteristic poset condition and  greatest fixpoints exist if there exists elements satisfying dual of characteristic conditions . 
+
+	}
+
+	\item{\textbf{iterates} :
+
+	Forms recursive relations. Covers all the elements of set.
+
+	All the iterates end in same cycle called basin of attraction.
+
+	for infinite set, iterate may endup in cycle, infinite iteration or a fixpoint.
+
+	}
+
+	\item{\textbf{numerical fixpoint} : cos(x) = x
+	}
+
+	\item{\textbf{equiv relation} : self understood example for a particular type of relation that should be an equivalence relation.
+	}
+	
+	\item{\textbf{grammar semantics} : are example of fixpoint definitions.
+
+	The semantic derivation of context free grammar rules results in a fixpoint definition.
+
+	The concatenation of two languages also form a fixpoint definition. understand this as the concatenation of 'C' and 'assembly language'. 
+	}
+
+	\item{\textbf{lattice of closure operators} :
+	as discussed earlier a closure operator operation on complete lattice results in a complete lattice. (similar to a fixpoint)) 
+	}
+
+	\item{\textbf{FIXPOINT THEOREMS} :
+
+	\begin{itemize}
+		\item{\textbf{Knaster-Tarski fixpoint theorem for monotone operators on a complete lattice} :
+		A monotonic map on a lattice has a least fixpoint and dually a greatest fixpoint.
+		}
+
+		\item{In lambda calculus notation, Least fixpoint definition of reflexive transitive closure emphasises on union of disjoint sets each formed from elements and  relation on elements of the poset. the strict transitive closure emphasis on relation of union of element by element of the complete set.
+		}
+
+		\item{\textbf{Banach’s lemma} : there exists two maps from A to B and B to A that creates partitions such that they are disjoint and their union results in A or/and B. 
+		}
+
+		\item{\textbf{The Cantor-Schröder-Bertein theorem} : given injective maps exist from A to B and B to A, there exists a Bijective Map.
+		}
+
+		\item{\textbf{David Park upper fixpoint induction principle} : says that for a lattice, least fixpoint operator gives values that follow the characteristic condition for a given point P outside the Invariant considered. 
+		}
+		
+		\item{\textbf{David Park lower fixpoint induction principle} : says that for a lattice, point P follows characteristic condition relative to greatest fixpoint operator's values. in this case point P lies inside the defined invariant
+
+		this is dual to upper fixpoint induction. 
+		}
+
+		\item{\textbf{Least fixpoint of a monotone operator greater than or equal to a given prefix-point exists then a least fixpoint for that point also exists. } 
+
+		for the conjugate, the postfix-point can be reasoned to have a least fixpoint.
+		}
+
+		\item{\textbf{Park conjugate (dual) fixpoint theorem incomplete boolean lattices} :
+		greatest fixpoint and least FixPoint of a montone operators on a lattice are basically conjugate of one another.
+		}
+
+		\item{\textbf{Park unique fixpoint conditionin a complete boolean lattice} :says that GLB of gfp and lfp is bottom and LUB of gfp and lfp is top. 
+		}
+
+		\item{\textbf{Fixpoint of the composition of monotone functions} : for two maps f,g from A to B and B to A, g( (lfp f) o g) = lfp (g o f).
+
+		for comparable operators on complete lattice, is operator f satisfies the characterization condition to operator g for a Lattice L, then lfp (f) also  satisfies the characterization condition to lfp(g). 
+		}
+
+		\item{\textbf{The Bekić–Leszczylowski fixpoint theorem} : for partial monotone operators on a lattice L, FixPoint of one is subset of other \& least fipoint is same for both.
+		}
+
+	\end{itemize}
+	}
+
+	\item{\textbf{Abstraction soundness} : says that for an operator (f) so that lfp(f) satisfies the characterization condition to a point P in lattice, there exists an operator (g) such that original operator (f) satisfies the characterization condition to that (g) and lfp(g ) satisfies the characterization condition to P.
+	}
+
+	\item{\textbf{Fixpoint clipping} : for a point P in L, lfp(f) satisfies the characterization condition to P implies that f( lfp GUB (f,P)) satisfies the characterization condition to GUB (lfp(f) , P).
+	}
+	
+	\item{\textbf{Fixpoint induction with clipping} : clipping performed with an assumed Invariant.
+	}
+
+	\item{\textbf{Application to the proof ofabsence of runtime errors} : using fixpoint definitions od erronous states and initial states etc to prove, disprove the existence of least fixpoints.
+	}
+
+\end{itemize}
