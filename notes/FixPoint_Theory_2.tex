@@ -1,0 +1,158 @@
+\chapter{FixPoint Theory 2}
+
+\begin{itemize}
+	\item{\textbf{fixpoint iteration} : 
+
+	Transfinite iteration on a poset involves the rules of initial starting value, successive ordinal and limit ordinals.
+
+	finite iteration theorem for monotone operator  on a lattice says that there exists an upward and increasing chain for the operator bound by a top point. 
+	}
+
+	\item{\textbf{Kleene fixpoint iteration theoremfor continuous function} : for a upper-continuous operator on a cpo, the iterate defined till a max limit then, value of iterate at the max limit is lfp of 'f'.	
+
+	such iterative fixpoint definitions can be extedned to strict transitive closure operators to reason for equivalence of left and right hand side of relation.
+	}
+
+	\item{\textbf{Scott fixpoint induction principle} : says for a point in the prefix-point of an upper continuous operator and is an element of P, the lfp(a) is element of P.
+
+	}
+
+	\item{\textbf{Lower fixpoint induction principle} : given upper continuous operator on a cpo, for an element 'a' of the prefix-point of that operator and subset P of Lattice, the P satisfies the characterization condition to lfp(f) at 'a'.
+	}
+	
+	\item{\textbf{Knaster-Tarski on cpos} : given upper continuous operator on a cpo, for an element 'a' of the prefix-point of that operator and subset P of Lattice,  lfp(f) at 'a'  = GLB of all x such that f(x) satisfies the characterization condition to x and a is element of x.
+	}
+
+	\item{\textbf{least fixpoint theorem for monotonefunctions on cpos } : given upper continuous operator on a cpo, for an element 'a' of the prefix-point of that operator and subset P of Lattice, the transfinite iterates of f form an increasing chain which is ultimately stationary andwhich limit is lfp(f) at 'a' .
+	}
+
+	\item{\textbf{Limit of the iterates } : for a monotonc map K, the mapping a prefixpoint from K to limit of iterates is a closure operator.
+	}
+
+	\item{\textbf{Ward theorem} : image of complete lattice by closure operator is a complete lattice. 
+	}
+
+	\item{\textbf{Constructive version of Tarski’s fixpoint theoremfor monotone operators on complete lattices } : set of fixpoints of a monotonic map on a complete lattice is a complete lattice.
+	}
+
+	\item{\textbf{Least fixpoint theorem on cpos} : for a monotonous operator on cpo with element 'a' in the prefixpoint of P, lfp(f (at a in P) ) does exist.
+	}
+
+
+	\item{\textbf{Variant transfinite fixpoint iteration} : for a monotonous operator on cpo with element 'a' in the prefixpoint of P, transfinite iteration limits at a stationary rank given by lfp(f (at a in P) ).
+	}
+	
+	\item{\textbf{Fixpoints of a function and its powers} : for monotonous operators, the lfp of compositions of the operator is equivalent to that of single one.
+
+	We can thus speed up the fixpoint teration by squaring or increasing the power of lfp on operator.
+	}
+
+	\item{\textbf{Least common fixpoints of continuous operators on a cpo} :
+	for a family of monotone and extensive operators on cpo, lfp for a point in the prefixpoint set of operators exist.
+
+	For two commuting operators f and g. following earlier analogy, lfp (f) = lfp (g) at the common point.
+
+	}
+
+	\item{\textbf{Fixpoints of extensive functions on cpos} : the operator's value on the a given cpo's elements is non-empty.
+
+	this does not hold is the operators are non-continuous.
+
+	}
+
+	\item{\textbf{Hoare's fixpoint theorem} : says the fixpoint of composition of two operators is the intersection of fixpoints of indivdual operatos acting on the lattice/poset.
+	}
+
+	\item{\textbf{Asynchrounous Iterations} :
+	deals with system of simultaneous fixpoint equations. solving this equations using the iterative techniques like jacobi, gausss siedel etc.
+	}
+
+	\item{\textbf{convergence theorems} : for a given prefix operator for the given pointwise ordering in a complete lattice , the chaotic iterations generates an increasing chain which is ultimately stationary and is fixed at the value given by fp(F) at D. D is a point of perfix (F).
+	}
+
+	\item{\textbf{async iteration for a system of fixpoint equations} :
+	gives the idea of parallelization. the process must be finally complete and they also may be ccarried by more than one computer at a given time.
+	}
+
+	\item{\textbf{the $\mu$ calculus} : for the given lattice, this is a method of representation of semantics. it consists of using $\mu$-expressions over operators and the lattice elements. there is a monotonous ordering achieved.
+
+	the $\mu$-expression can be extended to composition of various other expression too. 
+
+	It has properly defined semantics.
+	}
+	
+	\item{\textbf{Kozen's $\mu$ calculus} : Uses three fundamental elements to define semantics namely propositional formulae, variables and some actions.
+
+	For a given transition system, (S,R,I) where S is set of states, R is relations defined and	I is the interpretation of propositional formulae.
+
+	Kozen's $\mu$ calculus eventualy states that the formula is a set of states for which the given formula is satisfied. the set of states and the formula are one and same.
+
+	}
+
+	\item{\textbf{Lattice theoretic fixpoint-based and rule-based formal definitions} :
+
+	Rule-based formal system is based on axiom and inference rules.
+
+	\begin{itemize}
+		\item{\textbf{equivalence of rule based and fixpoint based formal definitions} : proofs in rule based formal system uses the finite set of possible points satisfying the rules anf universal conditions. the set formed by these points needs to be finite and hence there should be a limit which can be referrd to as fixpoint.
+
+		The proof-theoretic and fixpoint-theoretic definitions on the set S defined by a formal system are equivalent.
+
+		example: rule based constraint definition and closure conditions. 
+		}
+
+		\item{\textbf{set of regular expressions generatedby the grammar of regular expressions} :
+		uses the closure operator definition to justify the equivalence.
+
+		the constraints and rule based definitions are proved to be equivalent.
+		}
+
+		\item{\textbf{Formal definition of the reflexive transitive closure of a binary relation} :
+		includes fixpoint definition, equational definition, constraint based definition and closure condition based formal definition and rule based definition.
+
+		all the them are equivalent, the different method of representation has been explained the th lecture.
+		}
+
+		\item{\textbf{Definition, semantics and equivalence of lattice theoretic formal definitions} : explains that there exists a limit often referred to as the 'least solution' in the lecture that can also be understood a a fixpoint. this existence is defined in all the types of formal definitions and thus they can be thought of being equivalent.
+		}
+
+	\end{itemize}
+	}
+
+	\item{\textbf{Derivation (generalizing proofs} : of some element 'x' if a lattice generates a transfinite sequence such that elements of that sequence satisfy the ordering condition and there exists a bottom and limit given by that elment 'x' .
+
+	beautifully explained the example of derivation of regular expression, there are sets formed with increasing number of elements.
+
+	FixPoint based and rule based derivation semantics can also be proved equivalent using reasonings similar to previous.
+	}
+
+	\item{\textbf{Join-Irreducible Rules} : says the lfp defined by set of rule instances and corresponding operator are equal.
+
+	if given a poset (proof) satisfying the rule based definition ,its subset also satisfies the rule based definition. 
+
+	example :  forming a set of even numbers using a rule based and operator definition. 
+	}
+
+	\item{\textbf{Inductive definition of the finite traceoperational semantics of a transition system} : uses a finite traces transformer for the given lattice's elements. this transformer is proved to satisfy Union-morphism and intersection-morphism.
+
+	this also states the quivalence of lfp and gfp at a extremeties (lfp at min and gfp at max).
+
+	Co-inductive definitions prove the transformer to be complete intersection-morphic and the set having a lfp. 
+	}
+
+	\item{\textbf{continuity of trace transformer} : the previously defined trace transformer is contnuous, though it can be non deterministic for the fixpoint semantics.
+	}
+
+	\item{\textbf{Bi-inductive definition of the finite and infinitetrace operational semantics of (a variant of) SIL} :  it is just a revision to the formal rule based semantics and explains the various parts of a SIL that can be achieved through rule based definitions.
+	}
+
+	\item{\textbf{Well-formedness of the Inductive Definition of the Complete Traces Operational Semantics} : the strict definitive component used for defining the inductive definitions is well formed. 
+	}
+
+	\item{\textbf{Beyond Action Induction} : 
+	For loops we cannot use syntactic structural induction becauseof the recursive definition of the traces.
+
+	For finite traces we can reason by induction on the length of traces, thus it is not possible to reason for the infinite traces. 
+	}
+
+\end{itemize}
