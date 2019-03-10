@@ -1,0 +1,133 @@
+\chapter{Approximation}
+
+\begin{itemize}
+	\item{\textbf{motivation \& intuition} : the improved spedd of convergence of iterative fixpoint transition with widening.
+	}
+
+	\item{\textbf{kleene, galois based continuous transformer, fixpoint Approximation} : as in the case of abstraction, this is too an abstraction but using approximation. uses composition of multiple operators to get the result.
+	}
+
+	\item{\textbf{kleene, galois based monotone transformer, fixpoint Approximation} : as in the case of abstraction, this is too an abstraction but using approximation. 
+	}
+
+	\item{\textbf{soudness of abstraction} : to prove the soundness, equivalence of lfp (operator F) and lattice P we overestimate the lfp(F) and under estimate P's element values.
+
+	completeness of abstraction is resulted by applying abstraction function to the lfp of operators's value of pre-fixpoint element and proving its equivalent to operators's value of abstraction function applied over the pre-fixpoint element.
+	}
+
+	\item{\textbf{kleene, galois abstract functions based, fixpoint Approximation} : for a monotonic, upper-continuous operator function, this means applying approximation function to lfp of (abstract function value at a prefix-point).
+	}
+
+	\item{\textbf{kleene, galois concretization based, fixpoint Approximation} : this is kind of  dual to previous method ( simple analogy intended), the concretization function is applied to the approximation of lfp values iteratively. 
+
+	this is monotinic and upper continuous. it is a well defined increasing chain and has limiting ordinal.
+	}
+
+	\item{\textbf{sufficient conditions for iterative fixpoint convergence} : a programming language's program properties can be defined in fixpoint form together with structural induction on syntactic semantics.
+
+	the different encodings of those properties, terms and functions can be explained with the help of abstract interpreters and syntactic analyzer.
+
+	A static analyzer is guided by abstraction and induction on syntactic structure of the program.
+
+	mathematically this static analyzer is expresses as a lattice togrther with an operator.
+
+	so for termination conditions, we need to have this lattice to be finite and lattice to follow ascending chain conditions.
+	}
+
+	\item{\textbf{iteration acceleration by extrapolation} : the lattice of intervals for example is a lattice not satisfying the ACC thus finding a solution for this case is quite difficult. 
+
+	the example case has been explained of a simple while loop. 
+
+	the computation is very slow and involves a lot of steps.
+
+	therefore we need to perform convergence accelerations using widening and narrowing.
+	}
+
+	\item{\textbf{Widening } : extrapolates unstable bounds to infinity. not monotonous transform.
+	}
+
+	\item{\textbf{upward iteration with widening} : is iteration sequence with the next subsequent term is a result of widening operation applied between previous term and operator.
+
+	It is sound because of increasing and monotonic nature of operations performed with an existing limit.
+	}
+
+	\item{\textbf{Narrowing} : limits/imporves the infinite bounds. reduces the acheiveable values set.
+	}
+
+	\item{\textbf{decreasing iteration sequence with narrowing} : is iteration sequence with the next subsequent term is a result of narrowing operation applied between previous term and operator.
+
+	its correctness is explained as similar to widening.
+
+	narrowing for an operator starting at a postfixpoint is decreasing in nature. the limit exists and is an overapproximation of leastfix point of the operator at the postfix-point.
+	}
+
+	\item{\textbf{static analysis with widening/narrowing} : 
+	iteration convergence accelaration.
+
+	automatic interval analysis with widening and narrowing.
+
+	fixpoint approximation using widening and narrowing. the approximation function may be very precise but the widening may not be very precise. this approximation depeends on states, it is done once for all propor to applying widening.
+
+	the static program analyzer iterates over the program states and performs narrowing/widening at the states.
+
+	galois based static program analyzer uses galois continuous ab the basic method to perform abstraction and give reasoning.
+	}
+
+	\item{\textbf{properties of widening and narrowing} : 
+	widening - starts below lfp and ends above postfixpoint.
+
+	narrowing - starts above lfp and ends above lfp.
+
+	dual widening - starts above greatest-fp and ends below prefixpoint.
+
+	dual narrowing - starts below gfp and ends below .
+
+	narrowing not always is able to recover the information lost by widening.
+	}
+
+	\item{\textbf{parametrized meta-example of interval invarianty by fixpoint approximation with convergence accelaration by widening/narrowing} : a given interpretor will perform same for similar type of program. the constraint may be different valued leaving us with more number of programs of similar nature, but the behaviour of interpretor will be same.
+	}
+
+	\item{\textbf{usefulness of widening} : using interval analysis it can be showed that there can be infinitely many abstract domains are needed. 
+
+	example : Kildall's constant propogation problem using the lattice.
+
+	the lattice is finite used to obtain program behavioural properties.
+
+	there are infinitely many abstract prameters required to reasn about he working of the program which can't be referrred directly by looking at the text.
+	}
+
+	\item{\textbf{Relative precision of widening} : its proved that limit of states is more precise for iteration with widening than iteration without widening
+	}
+
+	\item{\textbf{weakening of hypotheses on widening} : over approximation and upper bound hypotheses can be made better by using a concretization function .
+	}
+
+	\item{\textbf{widening are not monotone, its immediate effects} : widening can not be monotone since for an equal element, the widening will result the same an hence loss of extrapolation.
+
+	a small change in static analyzer may lead to global deterioration of the complete program.
+	}
+
+	\item{\textbf{design of widening/narrowing} :
+
+	\begin{itemize}
+		\item{iteration threshold. (do not perform widening/narrowing till some iterations).}
+		\item{Unrolling. semantically unroll the first iterates of loop.}
+		\item{using cutpoints}
+		\item{history based extrapolations}
+	\end{itemize}
+	}
+
+	\item{\textbf{threshold widening} : involves widening with thresholds (some limiting values of elements of the lattice).
+	}
+
+	\item{\textbf{widening for pairs and tuples} : is a set product of widening/ narrowing operators.
+	}
+
+	\item{\textbf{first order functional widening} : 
+	}
+
+	\item{\textbf{second order functional widening} :
+	}
+
+\end{itemize}
