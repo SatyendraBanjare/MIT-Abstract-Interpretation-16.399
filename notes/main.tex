@@ -1,111 +1,82 @@
 %%% Preamble
-\documentclass[paper=a4, fontsize=11pt]{scrartcl}
-\usepackage[T1]{fontenc}
-\usepackage{fourier}
 
-\usepackage[english]{babel}															% English language/hyphenation
-\usepackage[protrusion=true,expansion=true]{microtype}	
-\usepackage{amsmath,amsfonts,amsthm} % Math packages
-\usepackage[pdftex]{graphicx}	
-\usepackage{url}
+\documentclass[11pt,twoside,openany]{report}
+%\documentclass[10pt]{llncs}
+%\usepackage{llncsdoc}
+\usepackage{bm}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{amsmath,amssymb}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{makeidx}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{listing}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{flafter}
+\usepackage[bottom=0.75in,right=1in,left=1in]{geometry}
+\usepackage{booktabs}   %% For formal tables:
+                        %% http://ctan.org/pkg/booktabs
+\usepackage{subcaption} %% For complex figures with subfigures/subcaptions
+                        %% http://ctan.org/pkg/subcaption
+\usepackage{enumitem}
+% \usepackage{minted}
+% \newminted{fortran}{fontsize=\footnotesize}
 
+\usepackage{xargs}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
 
-%%% Custom sectioning
-\usepackage{sectsty}
-\allsectionsfont{\centering \normalfont\scshape}
-
-
-%%% Custom headers/footers (fancyhdr package)
-\usepackage{fancyhdr}
-\pagestyle{fancyplain}
-\fancyhead{}											% No page header
-\fancyfoot[L]{}											% Empty 
-\fancyfoot[C]{}											% Empty
-\fancyfoot[R]{\thepage}									% Pagenumbering
-\renewcommand{\headrulewidth}{0pt}			% Remove header underlines
-\renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
-\setlength{\headheight}{13.6pt}
-
-
-%%% Equation and float numbering
-\numberwithin{equation}{section}		% Equationnumbering: section.eq#
-\numberwithin{figure}{section}			% Figurenumbering: section.fig#
-\numberwithin{table}{section}				% Tablenumbering: section.tab#
-
-
-%%% Maketitle metadata
-\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
-
-\title{
-		%\vspace{-1in} 	
-		\usefont{OT1}{bch}{b}{n}
-		%\normalfont \normalsize \textsc{} \\ [25pt]
-		\horrule{0.5pt} \\[0.4cm]
-		\normalsize MIT(16.399) - Abstract Interpretation (Patrick Cousot) \\
-		\horrule{2pt} \\[0.5cm]
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
 }
-\author{
-		\normalfont 								\normalsize
-        Satyendra Kumar Banjare\\[-3pt]		\normalsize
-        \today
-}
+
+\usepackage{epsfig}
+\usepackage{tabularx}
+\usepackage{latexsym}
+
+
+\title{MIT(16.399) - Abstract Interpretation (Patrick Cousot)}
+\author{Satyendra Kumar Banjare }
 \date{}
+
+
+
 
 \begin{document}
 \maketitle
 
-This is more like a summary of all the lecture slides presented in ordered manner.
+\tableofcontents
 
-\section{Overview of Abstract Interpretation}
-\begin{itemize}
-	\item{\textbf{Static Analysis} : 
-	}
-	\item{\textbf{Semantics \& Undecidability} : 
-	}
-	\item{\textbf{Safety Proofs} : 
-	}
-	\item{\textbf{Abstract Interpretation \& Formal Methods} : 
-	}
-	\item{\textbf{Trace Semantics} : 
-	}
-	\item{\textbf{Collecting Semantics} : 
-	}
-	\item{\textbf{Abstracting Sets \& Concretization} : 
-	}
-	\item{\textbf{Convergence Acceleration} : 
-	}
-	\item{\textbf{Interval Analysis} : 
-	}
-	\item{\textbf{Refinement of Abstractions} : 
-	}
-	\item{\textbf{Combinations of Abstractions} : 
-	}
-	\item{\textbf{Backward \& Forward Analysis} : 
-	}
-\end{itemize}
-
-\section{Software Verification Problem}
-\section{Abstract Invariance and Termination Proofs}
-\section{Set Theory}
-\section{Operational Semantics}
-\section{First Order Logic}
-\section{Program Specifications}
-\section{Collecting Semantics}
-\section{Lattice theory - 1}
-\section{Lattice theory - 2}
-\section{Ordered Maps \& Galois Connections - 1}
-\section{Ordered Maps \& Galois Connections - 2}
-\section{FixPoint Theory - 1}
-\section{FixPoint Theory - 2}
-\section{Abstraction - 1}
-\section{Abstraction - 2}
-\section{Post Condition semantics}
-\section{Approximation}
-\section{Non-relational monotonic finitary static analysis - 1}
-\section{Non-relational monotonic finitary static analysis - 2}
-\section{Forward Non-relational Infinitary Static Analysis}
-\section{Forward Relational Finitary Static Analysis}
-\section{Iterated Forward/backward Relational infinitary Static Analysis}
+\include{Overview_of_abstract_interpretation}
+\include{Software_Verification_Problem}
+\include{Abstract_Invariance_and_Termination_Proofs}
+\include{Set_Theory}
+\include{Operational_Semantics}
+\include{First_Order_Logic}
+\include{Program_Specifications}
+\include{Collecting_Semantics}
+\include{Lattice_theory_1}
+\include{Lattice_theory_2}
+\include{Ordered_Maps_Galois_Connections_1}
+\include{Ordered_Maps_Galois_Connections_2}
+\include{FixPoint_Theory_1}
+\include{FixPoint_Theory_2}
+\include{Abstraction_1}
+\include{Abstraction_2}
+\include{Post_Condition_semantics}
+\include{Approximation}
+\include{Non-relational_monotonic_finitary_static_analysis_1}
+\include{Non-relational_monotonic_finitary_static_analysis_2}
+\include{Forward_Non-relational_Infinitary_Static_Analysis}
+\include{Forward_Relational_inFinitary_Static_Analysis}
+\include{Iterated_Forward_backward_Relational_infinitary_Static_Analysis}
 
 
 \end{document}
