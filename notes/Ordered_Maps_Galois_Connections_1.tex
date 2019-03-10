@@ -1,0 +1,155 @@
+\chapter{Ordered Maps Galois Connections 1}
+
+\begin{itemize}
+
+	\item{\textbf{Maps Between Posets} : simply extending the idea of relations including various morohisms for poset.
+	}
+
+	\item{\textbf{Mono/Anti-tone Maps} : monotone if one to one and order preserving. anti-tone if order reversal. also referred to as dual.
+	}
+
+	\item{\textbf{characterization of monotone maps} : is done by checking if the lub of one poset lies in the subset of other poset. 
+	}
+
+	\item{\textbf{Order Embedding} : refers to a poset map if the functional value of that poset's elements can also form a poset.
+
+	It is injective.
+
+	Order isomorphism is an order embedding which is bijective.
+	}
+
+	\item{\textbf{Preserving Maps} : can be of type join preserving or meet preserving. (seee lattice theory part for clear idea). 
+
+	f( lub of elements from two posets) = f(element of A) lub f(element of B).
+
+	They are not monotone.
+
+	all the maps may not preserve lubs or glbs.
+	}
+
+	\item{\textbf{Complete Join Preserve Maps} : if a preserving maps preserves all the GLBs and LUBsthen it is called complete join preserving maps.
+
+	not all finite Join/meet preserving maps are complete.
+	}
+
+	\item{\textbf{Continuous Maps} : if f(lub of chain C of poset) is a subset lub of f(chain).
+
+	they are monotone.
+	}
+
+	\item{\textbf{Lattice Morphisms} : extends the relations for lattices.
+	}
+
+	\item{\textbf{Notations for monotone lub/glb preserving co-continuous maps} : simple notations for clearing out the type of mapping done.
+	}
+
+	\item{\textbf{complete lattice of point wise ordered monotone maps on lattice points form a complete lattice themselves}. 
+	}
+
+	\item{\textbf{Encoding Maps between Posets using boolean algebra} : refers to ordering and grouping the set elements in some ways. example - CNF conjuctive normal form used in SAT solvers. 
+	}
+
+	\item{\textbf{Shanon Trees \& Boolean Decision Diagrams} : shanon trees of boolean expression can be represented by BDD.
+
+	this can be done by merging and reducing to a directed acyclic graph, DAG and forther elemeinating useless nodes.
+
+	they are isomorphic to each other.
+	}
+
+	\item{\textbf{Ordered BDD } : if left subtree is not equal to right. this would create separate and different hierachy for decision dependence of elements and thus 'orderize' them.
+	}
+
+	\item{\textbf{Typed Shanon Tree} : uses a mathematical sign (+ / -) to represent the difffence instead to sing 0 or 1. only one is used.
+	}
+
+	\item{\textbf{Typed Decision Graph} : is obtained from typed shanon trees using the previous merging and eliminating rules.
+
+	thus boolean expression can be represented by TDG.
+
+	TDG  of a boolean expression is unique.
+	}
+
+	\item{\textbf{TDG Operations} : boolean operation uses shannon decomposition to avoid recursive calls to same node (physical address). 
+
+	this is similar to checking for equality for a TDG.
+	}
+
+	\item{\textbf{Encoding of Complete Join Morphisms with join irReducibles} :
+	element of a poset is join irreducible if its not the bottom or it is either of two elements whose lub is equal to it.
+	}
+
+	\item{\textbf{Descending Chain irReducibles} :
+	Encoding of lattice satisfying DCC can be done by the image of join irreducibles.
+	}
+
+	\item{\textbf{Atoms and join irReducibles} : atoms of a poset refers to those satifying the duality principle with bottom of poset.
+
+	image of boolean lattice's join irreducibles is a subset of atoms of that poset.
+	}
+
+	\item{\textbf{Closure Operators} : that maps p into p.
+	}
+	
+	\item{\textbf{Upper Closure Operators} : closure operators that maps to higher elements.
+	}
+
+	\item{\textbf{Topological Closure Operators} : is a closure opertor and is strict, extensive, follows join morohism and is idempotent.
+	}
+
+	\item{\textbf{Morgado Theorem for upper closure operators} : says an operator is upper closure operator if and only is operator(x) less than or equal to operator(y) forall x less than or equal to operator(y). x, y are elements of poset.
+	}
+
+	\item{\textbf{Fixpoints of closure Operators} : it returns the same value.
+	}
+	
+	\item{\textbf{Galois Connections} : Two maps A and B mappig from two posets P to Q and Q to P respectively are said to form galoin connections if A(element of P) (characteristic property of Q) (Q's Element) and similar for B.
+
+	example - bijective functions.
+
+	}
+
+	\item{\textbf{Galois Connections - Functional Abstraction} : representing the mapping as functions and let them form galois connections.
+	}
+
+	\item{\textbf{Galois Connections induced by upper closure operators} : extends Morgado's condition that makes a galois connection.
+	}
+
+	\item{\textbf{unique adjoints} : one adjoint of galois connection determines other.
+	}
+	
+	\item{\textbf{Properties of Galois Connections} : 
+	is monotone.
+
+	A o B is lower closure on P.
+	B o A is upper closure on Q.
+
+	}
+
+	\item{\textbf{Duality Principle for Galois Connections} : dual of a galois connection is simply exchange of the adjoints. (A,B) - (B,A).
+	}
+
+	\item{\textbf{Composition of Galois Connections} : composition if possible if resulting is also a galois connection.
+	}
+
+	\item{\textbf{Galois Surjections} : is one to one, (A o B) = 1. A is onto.
+	}
+
+	\item{\textbf{Galois Injections} : is one to one, (A o B) = 1. B is onto.
+	}
+
+	\item{\textbf{Conjugate Galois Connections in Boolean Algebra } : 
+	conjugate mapping results in forming a galois connection with reversed characteristic property of the earlier posets.
+	}
+
+	\item{\textbf{Reduction of Galois Connection} :
+	done using Pre , Post and Duals.
+	}
+
+	\item{\textbf{Sum of Galois Connections} : is summing individually the mapps for the two same posets.
+	}
+
+	\item{\textbf{Power of Galois Connections} : is galois connection formation between two sets of galois connection having a monotine mapping done between formers and laters by same map then resulting composition is also a galois connection.
+	}
+
+\end{itemize}
+
