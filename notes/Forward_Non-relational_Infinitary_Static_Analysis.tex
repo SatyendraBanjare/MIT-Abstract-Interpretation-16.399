@@ -1,0 +1,150 @@
+\chapter{Forward Non-relational Infinitary Static Analysis}
+
+\begin{itemize}
+	\item{\textbf{Proving the correctness of static analyzers} : the principle for proving the soundness of static analyzers is to proceed by induction on the syntax of programs, which yields a proof for the whole programming language.
+
+	The proof involves use of quite general form of collecting semantics, abstraction and abstract definitions concretized by formal definition (galois connections).
+	}
+	
+
+	\item{\textbf{abstract formalization of finitary structural analysis by abstract interpretation} : The abstract syntax defines a collection of syntactic categories and a well-founded relation.
+	
+	It consists of defining concrete domains, concrete semantics.
+
+	Type-ing the structural concrete semantics uses components like language, types, abstract domains typing component (base types), typing semantic expression, typing soundness of semantic equational semantics.
+	}
+
+	\item{\textbf{forward collecting semantics of arithmetic expressions} : defines rules from simple arithmetic expressions to mapping in semantic expressions. 
+	}
+
+	\item{\textbf{Example of structural concrete semantics} : are commands,	sequences and programs, that deal with reachable states, transition system and operational semantics.
+	}
+
+	\item{\textbf{Well-definedness of structural semantics} : If fixpoints exist then the structural seman-tic definition is well-defined.
+	}
+
+	\item{\textbf{Fixpoint existence} : transfinite sequence has a limit ordinal defined.
+	}
+
+	\item{\textbf{Monotonic structural semantics} : the structural semantics is said to be Monotonic if all the structural semantic mappings defined on a given poset are monotonic.
+
+	they are well defined if lfp exist for such cpos.
+	}
+
+	\item{\textbf{Structural abstract semantics} : it is similar to structural collecting semantics. uses idea of abstract domain, abstract transformers and abstract semantics. 
+	}
+
+	\item{\textbf{Local abstraction} : is idea is used to create correspondence between concrete and abstract semantics.
+
+	is said to be defined whenever similar definitions and correspondingly similar structural expressions exist for abstract domains and concrete domains. The abstract domain are subset of concrete domains.
+
+	this correspondence between concrete and abstract is well defined if there exists both concrete and abstract lfps.  
+	}
+
+	\item{\textbf{abstract formalization of infinitary structural analysis by abstract interpretation}  :
+
+	Uses widening structral semantics that are similar to collecting semantics. 
+	}
+
+
+	\item{\textbf{soundness theorem on the correspondencebetween concrete semantics and its local abstraction by a structural abstract semantics with widening} : says that the local abstraction and widening if hold for the structurally same expressions, they follow ordering w.r.t one other. 
+	}
+
+	\item{\textbf{Hypotheses on narrowings} : there are two defined hypotheses namely - the narrowing is subset of larger set from which narrowing is made. and the sequence generated is decreasing.
+
+	A structural definition with widenings and narrowings respectively satisfying narrowness and widening hypotheses is well-defined.
+	}
+
+	\item{\textbf{soundness theorem on the correspondencebetween a concrete semantics and its local abstraction by a structural abstract semanticswith widening/narrowing} : if two structurally identical expressions / definitions exist and narrowing and widening hypotheses hold then one can be represented as an concretization of other.
+	}
+
+	\item{\textbf{Abstract formalization of structural verification by abstract interpretation} :  
+	Deals with structural safety proof and abstract safety specification. It involves design abstract semantics that are computable with a given choice of abstract domains, transfer functions and widening/narrowings. 
+	}
+
+	\item{\textbf{Abstract structural safety verification} : Checks if a concretization exists for a given command.
+
+	An abstract structural safety verification is sound.
+	}
+
+	\item{\textbf{Example of abstract structural safety specification for arithmetic expressions:proper initialization } execution of arithmetic expression in a given environment is without any initialization error if forward collecting semantics do not cause errors.
+
+	We can only strengthen the analysis by refining theabstraction or weaken the specification.
+	}
+
+	\item{\textbf{choosing an abstract semantics more refined than an abstract specifications} :
+	The objective is to check the conformance of a semantics to a specification.
+
+	The fact that the abstract semantics should be morerefined than the abstract specification is similar theproof of theorem requiring stringer arguments in the proof.
+
+	By choosing abstract specification we are simply satisfying the concretization conditions for supposed specs but it is difficult to represent it in as a abstract domain.
+	}
+
+	\item{\textbf{Error Analysis, error abstraction} : 
+	Error Abstraction :  takes initialization and arithmetic errors into account. We can draw a hasse diagram for error complete lattice.
+	}
+
+	\item{\textbf{Parity analysis} : analyzing parity conditions.
+	}
+
+	\item{\textbf{Design of the abstract properties} :
+	
+	\begin{itemize}
+		\item{\textbf{interval analysis} : involves error and interval abstraction. lattice modelling of intervals. proving existence of lubs to show the existence of complete lattice of intervals.
+
+		Interval Abstraction represented with galois connection and defining composition rules to accurate the working intervals. Defining reduced products on posets. Includes defining concretizations for products.
+		}
+
+		\item{\textbf{error-interval abstraction} :
+		We define the interval and error abstraction as the re-duced product of the interval and error abstractions.
+
+		this analysis uses parity analysis too to achieve more reasonable lattice.
+		}
+
+		\item{\textbf{interval abstraction as the reduced product of the minimum and maximum abstractions} : says that the lattice having a maxima, minima has a dual by galois connection
+		thus a new pair can be repreented as a reduced product.
+		}
+	\end{itemize}	
+	}
+
+\end{itemize}
+
+These are Ocaml implemenations discussed in lecture.
+
+\begin{itemize}
+
+	\item{\textbf{Design of Abstract Transformers} :
+	implementation in ocaml. uses symbolic execution property to check errors.
+	}
+
+	\item{\textbf{Design of Abstract Transformers -backward integer constant} : implements a bool check for if a given integer lies in between a given pair 'V'.
+	}
+
+	\item{\textbf{Design of the abstract transformers: forward integer addition} : implements addition semantics using forward abstract semantics.
+	}
+
+	\item{\textbf{Design of the abstract transformers: backwardinteger addition} : implements addition semantics using backward/ bottom-up abstract semantics.
+	}
+
+	\item{\textbf{Design of the abstract transformers: forward integer comparison} :
+	}
+
+	\item{\textbf{Implementation of the abstract transformers} :
+	}
+
+	\item{\textbf{Design of the abstractconvergence accelerators (Widening)} :
+	}
+
+	\item{\textbf{Generic abstract interpreter} : 
+	The global structure of the analyzer is the same whichever is the abstract domain chosen to approximate sets of values.
+
+	Up to the use of widening/narrowing when no con-vergence acceleration is needed (e.g. finite domains,domains satisfying the ACC with rapid convergence.
+
+	For non-relational analyzes, the structure of the ab-stract domain approximating sets of environements only depends on the abstract doamin for sets of values.
+	}
+
+	\item{\textbf{Forward static analyzer} :
+	}
+
+	
+\end{itemize}
